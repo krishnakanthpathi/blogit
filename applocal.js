@@ -19,7 +19,7 @@ ImageUrl.addEventListener("change", () => {
 
 // Handling form submission to localStorage
 form.addEventListener("submit", function (e) {
-    e.preventDefault();
+    e.preventDefault(); // Prevent the default form submission
 
     const reader = new FileReader();
     const imageDataFile = ImageUrl.files[0];
@@ -38,14 +38,24 @@ form.addEventListener("submit", function (e) {
         blogs.push(postObj);
         localStorage.setItem("blogs", JSON.stringify(blogs));
 
-        // Reset form and close modal
-        form.reset();
-        document.getElementById("displayImg").src = "assets/imgs/defaultImg.jpg";
+        // Reset the form and the preview image
+        resetForm();
+
+        // Check if the blog was added successfully
+        console.log("Blog added:", postObj);
 
         // Reload the page to display the new blog
-        window.location.reload();
+        setTimeout(() => {
+            window.location.reload();
+        }, 100); // Delay reload slightly to ensure the form has reset
     });
 });
+
+// Function to reset the form and preview
+function resetForm() {
+    form.reset(); // Reset the form fields
+    document.getElementById("displayImg").src = "assets/imgs/defaultImg.jpg"; // Reset the preview image
+}
 
 // Function to display blogs from localStorage
 function displayBlogs() {
