@@ -38,12 +38,12 @@ form.addEventListener("submit", function (e) {
         blogs.push(postObj);
         localStorage.setItem("blogs", JSON.stringify(blogs));
 
-        // Reload blogs
-        displayBlogs();
-
         // Reset form and close modal
         form.reset();
         document.getElementById("displayImg").src = "assets/imgs/defaultImg.jpg";
+
+        // Reload the page to display the new blog
+        window.location.reload();
     });
 });
 
