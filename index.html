@@ -91,32 +91,30 @@
             </div>
       
             <div class="modal-body">
-                  <form class="p-2" id="AddBlog" method="dialog"  enctype="text/plain">
-                      <div class="form-group">
-                        <label class="text-capitalize mb-3 mt-3 for="title">Blog Title</label>
-                        <input type="text" id="Title" class="form-control" name="title"  placeholder="Title" required>
-                        
-                      </div>
-                      <div class="form-group">
-                        <label class="text-capitalize mb-3 mt-3" for="displayImg">Preview ..</label><br>
-                        <img src="assets/imgs/defaultImg.jpg" alt="" id="displayImg" class="m-2 ms-0 img-thumbnail img-fluid" srcset="" > 
-                      </div>
-          
-                      <div class="form-group">
-                          <label class="text-capitalize mt-3 mb-3" for="image ">Image</label>
-                          <input type="file" class="form-control" id="ImageUrl"  name="image"  placeholder="Image" required>
-                        
-                      </div>
-          
-                      <div class="form-group">
-                        <label class="text-capitalize mt-3 mb-3" for="Bloginfo ">content</label>
-                       <textarea name="Bloginfo" class="form-control" id="Blogcontent" rows="7" required></textarea>
-                      </div>
-                       
-                      <button type="submit" onclick="return " class="btn btn-primary mt-2">Submit</button>
-                  </form> 
-            
-            </div>
+    <form class="p-2" id="AddBlog" method="dialog" enctype="text/plain">
+        <div class="form-group">
+            <label class="text-capitalize mb-3 mt-3" for="title">Blog Title</label>
+            <input type="text" id="Title" class="form-control" name="title" placeholder="Title" required>
+        </div>
+        <div class="form-group">
+            <label class="text-capitalize mb-3 mt-3" for="displayImg">Preview ..</label><br>
+            <img src="assets/imgs/defaultImg.jpg" alt="" id="displayImg" class="m-2 ms-0 img-thumbnail img-fluid">
+        </div>
+        <div class="form-group">
+            <label class="text-capitalize mt-3 mb-3" for="image ">Image</label>
+            <input type="file" class="form-control" id="ImageUrl" name="image" placeholder="Image" required>
+        </div>
+        <div class="form-group">
+            <label class="text-capitalize mt-3 mb-3" for="Bloginfo ">content</label>
+            <textarea name="Bloginfo" class="form-control" id="Blogcontent" rows="7" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Submit</button>
+    </form>
+    <div id="successMessage" class="alert alert-success mt-3 d-none" role="alert">
+        Blog submitted successfully!
+    </div>
+</div>
+
             
           </div>
         </div>
